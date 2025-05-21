@@ -7,9 +7,10 @@ function App() {
   return (
     <>
       <Header />
-      {/* <BlogPage /> */}
+     <BlogPage/>
     </>
   );
 }
 
 export default App;
+<<<<<<< HEAD
