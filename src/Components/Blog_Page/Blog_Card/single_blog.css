@@ -80,7 +80,7 @@
     color: var(--secondary-color);
     font-weight: 700;
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 1.4rem;
     transition: color 0.3s ease;
   }
   
@@ -91,7 +91,6 @@
   .excerpt {
     color: var(--paragraph-color);
     margin-bottom: 20px;
-    font-size: 14px;
     flex: 1;
   }
   
@@ -103,7 +102,6 @@
     padding: 10px 20px;
     border-radius: 30px;
     text-decoration: none;
-    font-size: 14px;
     font-weight: 600;
     transition: all 0.3s ease;
     width: fit-content;
