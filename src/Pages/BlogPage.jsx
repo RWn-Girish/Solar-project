@@ -1,7 +1,9 @@
+import BlogExample from "../Components/Blog_Page/Blog_Card/Blog_card";
+
 const BlogPage = () => {
     return (
         <>
-            <h2>Blog Page</h2>
+            <BlogExample/>
         </>
     )
 }
