@@ -1,7 +1,7 @@
 import './Header.css';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { FaComments } from 'react-icons/fa';
-import { headerlogo } from '../assets/images/white-logo.png';
+import headerlogo  from '../assets/images/white-logo.png';
 
 const Header = () => {
   return (
@@ -11,8 +11,8 @@ const Header = () => {
           <Navbar.Brand href="#">
             <img
               src={headerlogo}
-              width="30px"
-              height="30px"
+            //   width="30px"
+            //   height="30px"
               className="d-inline-block align-top me-2"
               alt="Solarex logo"
             />
