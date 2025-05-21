@@ -4,7 +4,7 @@
     --secondary-color: #24231d;
     --paragraph-color: #878680;
   }
-  
+
   .blog-card {
     border: none;
     border-radius: 10px;
@@ -16,18 +16,18 @@
     display: flex;
     flex-direction: column;
   }
-  
+
   .blog-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   }
-  
+
   .img-wrapper {
     position: relative;
     overflow: hidden;
     height: 220px;
   }
-  
+
   .img-wrapper::before {
     content: '';
     position: absolute;
@@ -40,29 +40,29 @@
     opacity: 0;
     transition: opacity 0.3s ease;
   }
-  
+
   .blog-card:hover .img-wrapper::before {
     opacity: 1;
   }
-  
+
   .card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
   }
-  
+
   .blog-card:hover .card-img {
     transform: scale(1.05);
   }
-  
+
   .card-body {
     padding: 25px;
     flex: 1;
     display: flex;
     flex-direction: column;
   }
-  
+
   .meta-info {
     display: flex;
     gap: 15px;
@@ -70,12 +70,12 @@
     font-size: 14px;
     color: var(--paragraph-color);
   }
-  
+
   .meta-info .icon {
     margin-right: 5px;
     color: var(--primary-color);
   }
-  
+
   .card-title {
     color: var(--secondary-color);
     font-weight: 700;
@@ -83,17 +83,17 @@
     font-size: 1.4rem;
     transition: color 0.3s ease;
   }
-  
+
   .blog-card:hover .card-title {
     color: var(--primary-color);
   }
-  
+
   .excerpt {
     color: var(--paragraph-color);
     margin-bottom: 20px;
     flex: 1;
   }
-  
+
   .read-more-btn {
     display: inline-flex;
     align-items: center;
@@ -106,21 +106,21 @@
     transition: all 0.3s ease;
     width: fit-content;
   }
-  
+
   .read-more-btn .icon {
     margin-left: 8px;
     transition: transform 0.3s ease;
   }
-  
+
   .read-more-btn:hover {
     background-color: var(--secondary-color);
     color: white;
   }
-  
+
   .read-more-btn:hover .icon {
     transform: translateX(5px);
   }
-  
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -131,12 +131,12 @@
       transform: translateY(0);
     }
   }
-  
+
   .blog-card {
     animation: fadeInUp 0.6s ease forwards;
     opacity: 0;
   }
-  
+
   .blog-card:nth-child(1) { animation-delay: 0.1s; }
   .blog-card:nth-child(2) { animation-delay: 0.2s; }
   .blog-card:nth-child(3) { animation-delay: 0.3s; }
