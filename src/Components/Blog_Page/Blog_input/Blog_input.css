@@ -1,0 +1,96 @@
+:root {
+    --bg-color: #f8f7f0;
+    --primary-color: #1d8f2c;
+    --secondary-color: #24231d;
+    --paragraph-color: #878680;
+    --transition-speed: 0.3s;
+  }
+  
+  .blog-input-container {
+    max-width: 500px;
+    margin: 0 auto 40px;
+    padding: 0 15px;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .blog-search-input {
+    width: 100%;
+    padding: 10px 20px 10px 50px;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    font-size: 16px;
+    color: var(--secondary-color);
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-speed) ease;
+    outline: none;
+  }
+  
+  .blog-search-input::placeholder {
+    color: var(--paragraph-color);
+    opacity: 0.7;
+  }
+  
+  .blog-search-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(29, 143, 44, 0.1);
+    padding-left: 55px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--paragraph-color);
+    transition: all var(--transition-speed) ease;
+  }
+  
+  .blog-search-input:focus + .search-icon {
+    color: var(--primary-color);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(29, 143, 44, 0.2);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(29, 143, 44, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(29, 143, 44, 0);
+    }
+  }
+  
+  .blog-input-container {
+    animation: fadeIn 0.6s ease forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .input-wrapper:hover .blog-search-input {
+    border-color: #c0c0c0;
+  }
+  
+  .input-wrapper:hover .search-icon {
+    color: var(--secondary-color);
+  }
+  
+  .blog-search-input:active {
+    animation: pulse 0.5s;
+  }

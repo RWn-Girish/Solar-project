@@ -1,20 +1,14 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-<<<<<<< HEAD
 import BlogPage from './Pages/BlogPage';
-=======
-import Header from './Components/Header';
->>>>>>> 684e649fcbae0547d285405e015b14987962ef4a
+// import Header from './Components/Header';
 
 function App() {
 
   return (
     <>
-<<<<<<< HEAD
+      {/* <Header/> */}
      <BlogPage/>
-=======
-      <Header/>
->>>>>>> 684e649fcbae0547d285405e015b14987962ef4a
     </>
   );
 }

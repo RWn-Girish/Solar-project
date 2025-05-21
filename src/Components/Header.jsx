@@ -4,14 +4,7 @@ import { FaComments } from 'react-icons/fa';
 import headerlogo  from '../assets/images/white-logo.png';
 
 const Header = () => {
-<<<<<<< HEAD
-    return (
-        <>
-    <h1>hello</h1>
-           
-        </>
-    )
-=======
+
   return (
     <>
       <Navbar bg="light" expand="lg" className="py-3">
@@ -74,7 +67,6 @@ const Header = () => {
       </Navbar>
     </>
   );
->>>>>>> 684e649fcbae0547d285405e015b14987962ef4a
 };
 
 export default Header;

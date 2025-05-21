@@ -1,5 +1,22 @@
 .BlogTitle {
     width: 100%;
-    height: 50%;
-background-image:  url(../../../assets//images/);
+    height: 50vh;
+    background-size: cover;
+    background-position:  center;
+  background-image:  url(../../../assets//images/Title-bg.jpg);
+}
+.TitleContent{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+
+}
+.TitleContent h1 {
+    color: var(--bg-color);
+    font-size: 60px;
+    font-weight: 700;
+}
+.TitleContent p {
+    font-size: 14px;
+   font-weight: 400;
 }
