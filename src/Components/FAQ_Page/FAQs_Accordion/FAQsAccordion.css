@@ -1,12 +1,31 @@
+:root {
+  --bg-color: #f8f7f0;
+  --primary-color: #1d8f2c;
+  --secondary-color: #24231d;
+  --paragraph-color: #878680;
+}
+
 .accordion-item {
   border-radius: 19px;
   padding: 8px;
   overflow: hidden;
   margin-bottom: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color);
 }
 
-.accordion-header h3{
+.accordion-button {
+  background-color: var(--bg-color);
+
+}
+
+.accordion-header h3 {
   font-size: 20px !important;
   font-weight: 700;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primary-color) !important;
+  background-color: var(--bg-color) !important;
+  box-shadow: var(--bg-color) !important;
 }

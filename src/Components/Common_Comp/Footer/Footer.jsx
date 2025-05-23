@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaFacebookF, FaLinkedinIn, FaYoutube, FaInstagram, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { AiFillClockCircle } from "react-icons/ai";
 import './Footer.css';
-import FooterLogo from "../../../assets/images/Footer-logo.png";
+import FooterLogo from "../../../assets/images/Prestige (4) 1.png";
 
 const Footer = () => (
   <footer className="footer">
@@ -16,7 +16,7 @@ const Footer = () => (
             <FaPhoneAlt className="footer-icon" />
             <div>
               <div style={{ fontSize: 14, color: "#fff" }}>Requesting A Call:</div>
-              <div style={{ fontWeight: 600, fontSize: 20  }}>+91-8123410101</div>
+              <div style={{ fontWeight: 600, fontSize: 20 }}>+91-8123410101</div>
             </div>
           </Col>
           <Col xs={12} md={4} className="d-flex align-items-center mb-4 mb-md-0">
@@ -38,7 +38,7 @@ const Footer = () => (
 
       {/* Main Footer */}
       <div className="footer-bottom-info">
-        <Row style={{padding : "80px 40px"}}>
+        <Row style={{ padding: "80px 40px" }}>
 
           {/* Logo and Description */}
           <Col xs={12} md={4} className="mb-4 mb-md-0 d-flex flex-column gap-2">
@@ -111,11 +111,18 @@ const Footer = () => (
       {/* Bottom Copyright */}
       <div className="footer-copyright-info">
         <Row>
-          <Col>
-            <div className="footer-bottom mt-4">
-              © {new Date().getFullYear()} EcoSoch. All Rights Reserved.
+          <div class="footer-bottom d-flex justify-content-between">
+            <div className="footer-copyright">
+              <p className="fs-6">© 2025 EcoSoch. All Rights Reserved.</p>
             </div>
-          </Col>
+            <div className="footer-bottom-navlist ">
+              <ul class="footer-ul-info">
+                <li><a href="#" className="text-decoration-none ">Trams &amp; Condition</a></li>
+                <li><a href="#" className="text-decoration-none ">Privacy Policy</a></li>
+                <li><a href="#" className="text-decoration-none ">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
         </Row>
       </div>
 
