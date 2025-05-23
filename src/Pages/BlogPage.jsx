@@ -1,11 +1,11 @@
 import BlogExample from '../Components/Blog_Page/Blog_Card/Blog_card';
-import Blog_Title from '../Components/Blog_Page/Blog_Title/Blog_Title';
 import Blog_input from '../Components/Blog_Page/Blog_input/Blog_Input';
+import Title from '../Components/Common_Comp/Title/Title';
 
-const BlogPage = () => {
+const BlogPage = (props) => {
   return (
     <>
-      <Blog_Title />
+      <Title title="Our Blog" page="Home" pageContent="Knowledge Center" />
       <Blog_input />
       <BlogExample />
     </>

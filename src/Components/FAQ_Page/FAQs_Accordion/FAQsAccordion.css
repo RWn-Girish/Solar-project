@@ -1,0 +1,12 @@
+.accordion-item {
+  border-radius: 19px;
+  padding: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header h3{
+  font-size: 20px !important;
+  font-weight: 700;
+}

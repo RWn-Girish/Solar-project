@@ -1,10 +1,10 @@
-import SingleBlogCard from "./Single_blog";
-import Card_1  from "./../../../assets/images/card.1.jpg"
-import Card_2  from "./../../../assets/images/card.2.webp"
-import Card_3  from "./../../../assets/images/card.3.jpg"
-import Card_4  from "./../../../assets/images/card.4.jpg"
-import Card_5  from "./../../../assets/images/card.5.webp"
-import Card_6  from "./../../../assets/images/card.6.png"
+import SingleBlogCard from './Single_blog';
+import Card_1 from './../../../assets/images/card.1.jpg';
+import Card_2 from './../../../assets/images/card.2.webp';
+import Card_3 from './../../../assets/images/card.3.jpg';
+import Card_4 from './../../../assets/images/card.4.jpg';
+import Card_5 from './../../../assets/images/card.5.webp';
+import Card_6 from './../../../assets/images/card.6.png';
 
 const BlogExample = () => {
   return (
@@ -70,8 +70,6 @@ const BlogExample = () => {
             readMoreLink="#"
           />
         </div>
-       
-       
       </div>
     </div>
   );

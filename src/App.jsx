@@ -1,13 +1,20 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BlogPage from './Pages/BlogPage';
-import Header from './Components/Header';
+import { Route, Routes } from 'react-router';
+import FAQPage from './Pages/FAQPage';
+import Header from './Components/Common_Comp/Navbar/Header';
+import Footer from './Components/Common_Comp/Footer/Footer';
 
 function App() {
   return (
     <>
       <Header />
-     <BlogPage/>
+      <Routes>
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/faqs" element={<FAQPage />} />
+      </Routes>
+      <Footer/>
     </>
   );
 }
