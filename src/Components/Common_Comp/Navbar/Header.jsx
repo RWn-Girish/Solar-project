@@ -1,13 +1,13 @@
 import './Header.css';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import headerlogo from '../../../assets/images/Header-logo.jpg';
+import { Link } from 'react-router';
 
 const Header = () => {
 
   return (
     <Navbar expand="lg" className="custom-navbar">
       <Container>
-        {/* Left Section - Logo */}
         <Navbar.Brand href="#">
           <img
             src={headerlogo}
@@ -17,10 +17,8 @@ const Header = () => {
           />
         </Navbar.Brand>
 
-        {/* Toggle Button for Mobile */}
         <Navbar.Toggle aria-controls="navbar-nav" />
 
-        {/* Center Nav */}
         <Navbar.Collapse id="navbar-nav" className="justify-content-center">
           <Nav className="header-center d-flex align-items-center">
             <Nav.Link href="#home">Home</Nav.Link>
@@ -38,7 +36,8 @@ const Header = () => {
             <Nav.Link href="#ev-charging">EV Charging</Nav.Link>
 
             <NavDropdown title="Knowledge Center" id="knowledge-dropdown">
-              <NavDropdown.Item href="#knowledge/blogs">Blogs</NavDropdown.Item>
+              <NavDropdown.Item href="#knowledge/blogs"> <Link to={"/blog"}>Blogs </Link></NavDropdown.Item>
+              <NavDropdown.Item href="#knowledge/blogs"> <Link to={"/faqs"}>FAQPage </Link></NavDropdown.Item>
               <NavDropdown.Item href="#knowledge/videos">
                 Videos
               </NavDropdown.Item>
@@ -53,7 +52,6 @@ const Header = () => {
           </Nav>
         </Navbar.Collapse>
 
-        {/* Right Section - Reach Us Button */}
         <div className="header-right d-none d-lg-block">
           <a href="tel:+918123410101" className="reach-btn">
             Reach us : (+91) 8123410101

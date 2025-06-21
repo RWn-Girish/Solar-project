@@ -3,18 +3,11 @@ import { Card } from 'react-bootstrap';
 import { FaCalendarAlt, FaUser, FaArrowRight } from 'react-icons/fa';
 import './single_blog.css';
 
-const SingleBlogCard = ({ 
-  imageUrl, 
-  date, 
-  author, 
-  title, 
-  excerpt, 
-  readMoreLink 
-}) => {
+const SingleBlogCard = ({ imageUrl, date, author, title, excerpt, readMoreLink }) => {
   return (
     <Card className="blog-card">
       <div className="img-wrapper">
-        <Card.Img variant="top" src={imageUrl} alt={title} />
+        <Card.Img variant="top" src={imageUrl} alt={title} className="card-img" />
       </div>
       <Card.Body>
         <div className="meta-info">
