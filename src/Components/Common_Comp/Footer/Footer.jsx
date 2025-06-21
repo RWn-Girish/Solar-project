@@ -9,7 +9,6 @@ const Footer = () => (
   <footer className="footer">
     <Container>
 
-      {/* Top Info Bar */}
       <div className="footer-top-info">
         <Row>
           <Col xs={12} md={4} className="d-flex align-items-center mb-4 mb-md-0">
@@ -36,11 +35,9 @@ const Footer = () => (
         </Row>
       </div>
 
-      {/* Main Footer */}
       <div className="footer-bottom-info">
         <Row style={{ padding: "80px 40px" }}>
 
-          {/* Logo and Description */}
           <Col xs={12} md={4} className="mb-4 mb-md-0 d-flex flex-column gap-2">
             <img src={FooterLogo} alt="EcoSoch" style={{ width: 180, marginBottom: 18 }} />
             <p style={{ color: "var(--paragraph-color)", fontSize: 15 }}>
@@ -54,7 +51,6 @@ const Footer = () => (
             </div>
           </Col>
 
-          {/* Useful Links */}
           <Col xs={12} md={4} lg={2} className="mb-4 mb-md-0">
             <div className="footer-useful-links">
               <div className="footer-title mb-3"><h4>Useful Links</h4></div>
@@ -70,7 +66,6 @@ const Footer = () => (
             </div>
           </Col>
 
-          {/* 🔥 New Support Section */}
           <Col xs={12} md={4} lg={2} className="mb-4 mb-md-0">
             <div className="footer-useful-links">
               <div className="footer-title mb-3"><h4>Support</h4></div>
@@ -83,8 +78,6 @@ const Footer = () => (
             </div>
           </Col>
 
-          {/* Newsletter */}
-          {/* 🔥 New Newsletter Section with Better Layout */}
           <Col xs={12} md={12} lg={4}>
             <div className="footer-newsletter-section p-3 rounded-3 shadow-sm">
               <div className="footer-title mb-2"><h4>Join Our Newsletter</h4></div>
@@ -108,7 +101,6 @@ const Footer = () => (
         </Row>
       </div>
 
-      {/* Bottom Copyright */}
       <div className="footer-copyright-info">
         <Row>
           <div class="footer-bottom d-flex justify-content-between">

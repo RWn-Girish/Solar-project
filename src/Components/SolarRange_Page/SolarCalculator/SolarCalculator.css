@@ -1,0 +1,256 @@
+:root {
+    --bg-color: #f8f7f0;
+    --primary-color: #1d8f2c;
+    --primary-light: rgba(29, 143, 44, 0.1);
+    --secondary-color: #24231d;
+    --paragraph-color: #878680;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .solar-calculator-container {
+    max-width: 700px;
+    margin: 0 auto;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    transition: var(--transition);
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+  }
+  
+  .solar-calculator-container:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .calculator-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .sun-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: pulse 2s infinite;
+  }
+  
+  .calculator-header h2 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  
+  .calculator-subtitle {
+    color: var(--paragraph-color);
+    font-size: 1rem;
+  }
+  
+  .calculator-controls {
+    margin-bottom: 2rem;
+  }
+  
+  .calculator-controls label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+  }
+  
+  .calculator-controls label strong {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+  }
+  
+  .slider-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .themed-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--bg-color);
+    outline: none;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+  }
+  
+  .themed-slider:hover {
+    transform: translateY(-2px);
+  }
+  
+  .themed-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 2px 10px rgba(29, 143, 44, 0.3);
+  }
+  
+  .themed-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(29, 143, 44, 0.4);
+  }
+  
+  .slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    color: var(--paragraph-color);
+    font-size: 0.9rem;
+  }
+  
+  .results-box {
+    background-color: var(--primary-light);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border: 1px solid rgba(29, 143, 44, 0.2);
+    animation: fadeIn 0.5s ease-out;
+    transform-origin: top;
+  }
+  
+  .results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .results-header h3 {
+    color: var(--secondary-color);
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  
+  .solar-panel-icon {
+    font-size: 1.8rem;
+    animation: bounce 2s infinite;
+  }
+  
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .result-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    transition: var(--transition);
+    box-shadow: 0 2px 5px var(--shadow-color);
+  }
+  
+  .result-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+  }
+  
+  .result-label {
+    font-size: 0.9rem;
+    color: var(--paragraph-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .result-value {
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .result-icon {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    opacity: 0.7;
+  }
+  
+  .cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .arrow-icon {
+    margin-left: 0.5rem;
+    transition: var(--transition);
+  }
+  
+  .cta-button:hover .arrow-icon {
+    transform: translateX(5px);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scaleY(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
