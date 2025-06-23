@@ -1,43 +1,32 @@
 import React, { useState } from 'react';
 import './ContactForm.css';
 
+const initialState = {
+  name: '',
+  email: '',
+  city: '',
+  mobile: '',
+  zipCode: '',
+  message: ''
+};
+
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    city: '',
-    mobile: '',
-    zipCode: '',
-    message: ''
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setFormData({
-        name: '',
-        email: '',
-        city: '',
-        mobile: '',
-        zipCode: '',
-        message: ''
-      });
-      setIsSubmitted(false);
-    }, 3000);
-  };
-
+    const [formData, setFormData] = useState(initialState);
+    const [isSubmitted, setIsSubmitted] = useState(false);
+  
+    const handleChange = ({ target: { name, value } }) =>
+      setFormData(prev => ({ ...prev, [name]: value }));
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log('Form submitted:', formData);
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setFormData(initialState);
+        setIsSubmitted(false);
+      }, 3000);
+    };  
+  
   return (
     <div className="contact-form-container">
       <div className="form-header">

@@ -103,7 +103,7 @@ const Footer = () => (
 
       <div className="footer-copyright-info">
         <Row>
-          <div class="footer-bottom d-flex justify-content-between">
+          <div className="footer-bottom d-flex justify-content-between">
             <div className="footer-copyright">
               <p className="fs-6">© 2025 EcoSoch. All Rights Reserved.</p>
             </div>
