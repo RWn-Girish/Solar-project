@@ -6,7 +6,7 @@ import microDiagram from '../../../assets/images/daigram_2.webp';
 import stringDiagram from '../../../assets/images/daigram_3.webp';
 
 const tabs = [
-  { 
+  {
     id: 'optimizer',
     label: 'Power Optimizers',
     icon: '⚡'
@@ -54,38 +54,38 @@ const TechnologyTabs = () => {
   };
 
   return (
-    <div className="tech-container-alt">
-      <div className="tech-header">
-        <h2 className="tech-title">
-          <span className="tech-title-highlight">Solar Technologies</span> for Commercial & Industrial Use
+    <div className="solar-tabs-wrapper">
+      <div className="solar-tabs-header">
+        <h2 className="solar-tabs-title">
+          <span className="solar-tabs-highlight">Solar Technologies</span> for Commercial & Industrial Use
         </h2>
-        <p className="tech-subtitle">Explore different solar inverter technologies to find the best solution for your needs</p>
+        <p className="solar-tabs-subtitle">Explore different solar inverter technologies to find the best solution for your needs</p>
       </div>
 
-      <div className="tab-selector-container">
+      <div className="solar-tab-list">
         {tabs.map((tab) => (
           <div
             key={tab.id}
-            className={`tab-option ${activeTab === tab.id ? 'active' : ''}`}
+            className={`solar-tab-item ${activeTab === tab.id ? 'selected' : ''}`}
             onClick={() => handleTabChange(tab.id)}
           >
-            <span className="tab-icon">{tab.icon}</span>
-            <span className="tab-label">{tab.label}</span>
+            <span className="solar-tab-icon">{tab.icon}</span>
+            <span className="solar-tab-label">{tab.label}</span>
           </div>
         ))}
       </div>
 
-      <div className={`tech-content ${direction}`}>
-        <div className="tech-description">
-          <h3 className="tech-content-title">{tabs.find(t => t.id === activeTab).label} Technology</h3>
-          <p>{descriptions[activeTab]}</p>
+      <div className={`solar-tab-content ${direction}`}>
+        <div className="solar-description-box">
+          <h3 className="solar-tab-heading">{tabs.find(t => t.id === activeTab).label} Technology</h3>
+          <p className="solar-tab-text">{descriptions[activeTab]}</p>
 
-          <div className="tech-benefits">
-            <h4>Key Benefits:</h4>
-            <ul>
+          <div className="solar-benefits">
+            <h4 className="solar-benefits-heading">Key Benefits:</h4>
+            <ul className="solar-benefits-list">
               {benefits[activeTab].map((benefit, index) => (
-                <li key={index}>
-                  <span className="benefit-icon">✓</span>
+                <li key={index} className="solar-benefit-item">
+                  <span className="solar-benefit-check">✓</span>
                   {benefit}
                 </li>
               ))}
@@ -93,13 +93,13 @@ const TechnologyTabs = () => {
           </div>
         </div>
 
-        <div className="tech-image-container">
+        <div className="solar-image-box">
           <img
             src={images[activeTab]}
             alt={`${tabs.find(t => t.id === activeTab).label} diagram`}
-            className="tech-image"
+            className="solar-tech-image"
           />
-          <div className="image-caption">
+          <div className="solar-image-caption">
             {tabs.find(t => t.id === activeTab).label} System Diagram
           </div>
         </div>

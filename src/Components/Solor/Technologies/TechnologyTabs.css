@@ -1,259 +1,263 @@
 :root {
-    --bg-color: #f8f7f0;
-    --primary-color: #1d8f2c;
-    --primary-light: rgba(29, 143, 44, 0.1);
-    --secondary-color: #24231d;
-    --paragraph-color: #878680;
-    --card-bg: #ffffff;
-    --border-radius: 12px;
-    --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --bg-color: #f8f7f0;
+  --primary-color: #1d8f2c;
+  --primary-light: rgba(29, 143, 44, 0.1);
+  --secondary-color: #24231d;
+  --paragraph-color: #878680;
+  --card-bg: #ffffff;
+  --border-radius: 12px;
+  --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.solar-tabs-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background-color: var(--bg-color);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.solar-tabs-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.solar-tabs-title {
+  font-size: 2.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.solar-tabs-highlight {
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.solar-tabs-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: var(--primary-light);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.solar-tabs-subtitle {
+  color: var(--paragraph-color);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.solar-tab-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.solar-tab-item {
+  padding: 1.2rem 2rem;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid #e0e0e0;
+}
+
+.solar-tab-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.solar-tab-item.selected {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.solar-tab-item.selected .solar-tab-icon {
+  transform: scale(1.1);
+}
+
+.solar-tab-icon {
+  font-size: 1.4rem;
+  transition: transform 0.2s ease;
+}
+
+.solar-tab-label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.solar-tab-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.solar-tab-content.right {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+.solar-tab-content.left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
+.solar-description-box {
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.solar-tab-heading {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.solar-tab-text {
+  color: var(--paragraph-color);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.solar-benefits-heading {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.solar-benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.solar-benefit-item {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--secondary-color);
+  line-height: 1.4;
+}
+
+.solar-benefit-check {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.solar-image-box {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  height: 410px;
+}
+
+.solar-tech-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.solar-image-box:hover .solar-tech-image {
+  transform: scale(1.03);
+}
+
+.solar-image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
   }
 
-  .tech-container-alt {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    background-color: var(--bg-color);
-    font-family: 'Inter', 'Segoe UI', sans-serif;
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
   }
 
-  .tech-header {
-    text-align: center;
-    margin-bottom: 3rem;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
 
-  .tech-title {
-    font-size: 2.2rem;
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-    font-weight: 700;
-    line-height: 1.3;
-  }
-
-  .tech-title-highlight {
-    color: var(--primary-color);
-    position: relative;
-    display: inline-block;
-  }
-
-  .tech-title-highlight::after {
-    content: '';
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background-color: var(--primary-light);
-    z-index: -1;
-    border-radius: 4px;
-  }
-
-  .tech-subtitle {
-    color: var(--paragraph-color);
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-
-  .tab-selector-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
-  }
-
-  .tab-option {
-    padding: 1.2rem 2rem;
-    background-color: var(--card-bg);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    box-shadow: var(--box-shadow);
-    border: 1px solid #e0e0e0;
-  }
-
-  .tab-option:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  }
-
-  .tab-option.active {
-    background-color: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
-  }
-
-  .tab-option.active .tab-icon {
-    transform: scale(1.1);
-  }
-
-  .tab-icon {
-    font-size: 1.4rem;
-    transition: transform 0.2s ease;
-  }
-
-  .tab-label {
-    font-weight: 600;
-    font-size: 1rem;
-  }
-
-  .tech-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    animation: slideIn 0.5s ease-out forwards;
-  }
-
-  .tech-content.right {
-    animation: slideInRight 0.5s ease-out forwards;
-  }
-
-  .tech-content.left {
-    animation: slideInLeft 0.5s ease-out forwards;
-  }
-
-  .tech-description {
-    background-color: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-  }
-
-  .tech-content-title {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-  }
-
-  .tech-description p {
-    color: var(--paragraph-color);
-    line-height: 1.8;
-    margin-bottom: 2rem;
-  }
-
-  .tech-benefits h4 {
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-  }
-
-  .tech-benefits ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .tech-benefits li {
-    margin-bottom: 0.8rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.7rem;
-    color: var(--secondary-color);
-  }
-
-  .benefit-icon {
-    color: var(--primary-color);
-    font-weight: bold;
-  }
-
-  .tech-image-container {
-    position: relative;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-    height: 410px;
-  }
-
-  .tech-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-
-  .tech-image-container:hover .tech-image {
-    transform: scale(1.03);
-  }
-
-  .image-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    font-weight: 500;
-  }
-
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-
-  @media (max-width: 1200px) {
-  .tech-image-container {
+/* Responsive */
+@media (max-width: 1200px) {
+  .solar-image-box {
     height: 100% !important;
+  }
 }
+
+@media (max-width: 992px) {
+  .solar-tab-content {
+    grid-template-columns: 1fr;
+  }
+
+  .solar-image-box {
+    height: 300px;
+    order: -1;
+  }
 }
-  @media (max-width: 992px) {
-    .tech-content {
-      grid-template-columns: 1fr;
-    }
 
-    .tech-image-container {
-      height: 300px;
-      order: -1;
-    }
+@media (max-width: 768px) {
+  .solar-tabs-title {
+    font-size: 1.8rem;
   }
 
-  @media (max-width: 768px) {
-    .tech-title {
-      font-size: 1.8rem;
-    }
+  .solar-tab-item {
+    padding: 1rem 1.5rem;
+  }
+}
 
-    .tab-option {
-      padding: 1rem 1.5rem;
-    }
+@media (max-width: 576px) {
+  .solar-tabs-wrapper {
+    padding: 3rem 1.5rem;
   }
 
-  @media (max-width: 576px) {
-    .tech-container-alt {
-      padding: 3rem 1.5rem;
-    }
-
-    .tab-selector-container {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .tab-option {
-      width: 100%;
-      justify-content: center;
-    }
+  .solar-tab-list {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .solar-tab-item {
+    width: 100%;
+    justify-content: center;
+  }
+}
