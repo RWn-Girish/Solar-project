@@ -1,0 +1,188 @@
+.ev-charging-tabs-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
+
+.ev-charging-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ev-charging-header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.ev-charging-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #212529;
+  position: relative;
+  display: inline-block;
+}
+
+.ev-charging-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.ev-charging-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ev-tabs-wrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.ev-tabs-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.ev-tab-btn {
+  padding: 10px 20px;
+  background: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #495057;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ev-tab-btn:hover {
+  color: #28a745;
+  transform: translateY(-2px);
+}
+
+.ev-tab-btn.active {
+  background: linear-gradient(135deg, #28a745 0%, #17a2b8 100%);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.ev-tab-content {
+  padding: 30px;
+}
+
+.ev-highlight-box {
+  background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(23, 162, 184, 0.1) 100%);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border-left: 4px solid #28a745;
+}
+
+.ev-highlight-text {
+  color: #212529;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.ev-tab-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #212529;
+}
+
+.ev-tab-points-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.ev-tab-point-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.ev-tab-point-item:hover {
+  transform: translateY(-5px);
+}
+
+.ev-point-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(40, 167, 69, 0.1);
+  border-radius: 50%;
+}
+
+.ev-point-content {
+  flex-grow: 1;
+}
+
+.ev-point-content strong {
+  display: block;
+  color: #28a745;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.ev-point-content p {
+  color: #6c757d;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .ev-charging-tabs-section {
+    padding: 60px 0;
+  }
+
+  .ev-charging-title {
+    font-size: 2rem;
+  }
+
+  .ev-tabs-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ev-tab-btn {
+    width: 100%;
+  }
+
+  .ev-tab-content {
+    padding: 20px;
+  }
+
+  .ev-tab-points-list {
+    grid-template-columns: 1fr;
+  }
+}

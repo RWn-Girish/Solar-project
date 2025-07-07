@@ -1,7 +1,7 @@
 import './Header.css';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import headerlogo from '../../../assets/images/Header-logo.jpg';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -22,7 +22,7 @@ const Header = () => {
           <Nav className="mx-auto header-center">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/Project">Projects</Nav.Link>
-         
+
 
             <NavDropdown title="Solar" id="solar-dropdown">
               <NavDropdown.Item href="#solar/Subsidy Scheme"> <Link to={"/Solar"} className='text-black'>Subsidy Scheme</Link> </NavDropdown.Item>
@@ -34,7 +34,7 @@ const Header = () => {
               <NavDropdown.Item href="#solar/Solar Care">Solar Care</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="#ev-charging">EV Charging</Nav.Link>
+            <Nav.Link href="/ev-charging">EV Charging</Nav.Link>
 
             <NavDropdown title="Knowledge Center" id="knowledge-dropdown">
               <NavDropdown.Item as={Link} to="/SolarRange">Solar Calculator</NavDropdown.Item>
@@ -44,8 +44,9 @@ const Header = () => {
               <NavDropdown.Item href="#knowledge/Solar Monitoring ">Solar Monitoring</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/faqs">FAQs</NavDropdown.Item>
               <NavDropdown.Item href="#knowledge/Latest ">Latest</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/*">404</NavDropdown.Item>
 
-            </NavDropdown> 
+            </NavDropdown>
 
             <Nav.Link href="#partner">Partner with Us</Nav.Link>
 

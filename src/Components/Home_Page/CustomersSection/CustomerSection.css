@@ -3,7 +3,7 @@
     padding: 3rem 1rem;
     text-align: center;
   }
-  
+
   .section-subtitle-customers {
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -11,37 +11,37 @@
     font-size: 1rem;
     letter-spacing: 2px;
   }
-  
+
   .section-title-customers {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 2rem;
     color: #222;
   }
-  
+
   .slider-container {
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   .logo-slide {
     padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
   .logo-slide img {
     max-width: 100%;
     max-height: 80px;
     object-fit: contain;
     transition: transform 0.3s ease;
   }
-  
+
   .logo-slide img:hover {
     transform: scale(1.05);
   }
-  
+
   .slider-container{
     margin: 20px auto !important;
   }

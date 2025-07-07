@@ -1,0 +1,137 @@
+:root {
+  --primary-color: #28a745;
+  --primary-dark: #218838;
+  --secondary-dark: #138496; 
+}
+
+.charging-calc-section {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.charging-calc-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.charging-calc-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.charging-calc-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-image-wrapper {
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.charging-calc-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 25px;
+  background: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.card-content p {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.calc-button {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 8px;
+  padding: 12px 24px;
+  color: black;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.calc-button:hover {
+  color: white;
+  background: var(--primary-color);
+  transform: translateX(5px);
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.calc-button:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+.public-card .card-image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(40, 167, 69, 0.7), transparent);
+}
+
+.home-card .card-image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(23, 162, 184, 0.7), transparent);
+}
+
+@media (max-width: 768px) {
+  .charging-calc-container {
+    grid-template-columns: 1fr;
+  }
+
+  .charging-calc-card {
+    height: 380px;
+  }
+
+  .card-image-wrapper {
+    height: 200px;
+  }
+}

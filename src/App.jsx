@@ -12,21 +12,25 @@ import SolarRange from './Components/SolarRange_Page/SolarRange';
 import Home from './Pages/Home';
 import Project from './Pages/Projects';
 import Solar from './Pages/Solor';
+import EV_Charging from './Pages/EV-Charging';
+import NotFoundPage from './Components/404_page/NotFoundPage';
 
 function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/faqs" element={<FAQPage />} />
-        <Route path="/SolarRange" element={ <SolarRange/> } />
-        <Route path="/Project" element={ <Project/> } />
-        <Route path="/Solar" element={ <Solar/> } />
+        <Route path="/SolarRange" element={<SolarRange />} />
+        <Route path="/ev-charging" element={<EV_Charging />} />
+        <Route path="/Project" element={<Project />} />
+        <Route path="/Solar" element={<Solar />} />
+        <Route path="/*" element={<NotFoundPage />} />
 
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }

@@ -9,13 +9,13 @@ import BannerSection from "../Components/Home_Page/banner/Banner";
 const Home = () => {
     return (
         <>
-        <BannerSection/>
-        <CounterSection/>
-        <AboutSection/>
-        <CustomerSection/>
-        <ProjectSection/>
-        <TestimonialSection/>
-        <ContactSection/>
+            <BannerSection />
+            <CounterSection />
+            <AboutSection />
+            <CustomerSection />
+            <ProjectSection />
+            <TestimonialSection />
+            <ContactSection />
         </>
     )
 }
