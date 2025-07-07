@@ -25,8 +25,7 @@ const Header = () => {
          
 
             <NavDropdown title="Solar" id="solar-dropdown">
-              <NavDropdown.Item href="#solar/Subsidy Scheme"> <Link to={"/Solar"} className='text-black'>Subsidy Scheme</Link> </NavDropdown.Item>
-              <NavDropdown.Item href="#solar/Commercial">Commercial</NavDropdown.Item>
+              <NavDropdown.Item href="#solar/Subsidy Scheme"> <Link to={"/Solar"} className='text-black text-decoration-none'>Commercial</Link> </NavDropdown.Item>
               <NavDropdown.Item href="#solar/Apartmenta">Apartmenta</NavDropdown.Item>
               <NavDropdown.Item href="#solar/Systems">Systems</NavDropdown.Item>
               <NavDropdown.Item href="#solar/Consulancy">Consulancy</NavDropdown.Item>
@@ -47,10 +46,13 @@ const Header = () => {
 
             </NavDropdown> 
 
-            <Nav.Link href="#partner">Partner with Us</Nav.Link>
+            
+            <Nav.Link href="#partner"> <Link to={"/Partner"} className='text-black text-decoration-none'>Partner With US</Link></Nav.Link>
 
+            
             <NavDropdown title="About Us" id="about-dropdown">
-              <NavDropdown.Item href="#about/Vision">Vision</NavDropdown.Item>
+            <NavDropdown.Item href="#solar/Subsidy Scheme"> <Link to={"/AboutUs"} className='text-black text-decoration-none'>Vision</Link> </NavDropdown.Item>
+
               <NavDropdown.Item href="#about/Our Team">Our Team</NavDropdown.Item>
               <NavDropdown.Item href="#about/Our Journey">Our Journey</NavDropdown.Item>
               <NavDropdown.Item href="#about/Partners">Partners</NavDropdown.Item>

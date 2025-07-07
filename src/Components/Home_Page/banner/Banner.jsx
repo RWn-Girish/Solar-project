@@ -6,7 +6,7 @@ import './bannerSection.css';
 const BannerSection = () => {
   return (
     <section className="residential-section">
-      <Container fluid className="h-100">
+      <Container  className="h-100">
         <Row className="h-100 align-items-center">
           <Col lg={6} className="order-lg-1 order-2">
             <div className="residential-content">

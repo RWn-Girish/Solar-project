@@ -12,6 +12,8 @@ import SolarRange from './Components/SolarRange_Page/SolarRange';
 import Home from './Pages/Home';
 import Project from './Pages/Projects';
 import Solar from './Pages/Solor';
+import AboutUs from './Pages/AboutUs';
+import Partner from './Pages/Partner';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/SolarRange" element={ <SolarRange/> } />
         <Route path="/Project" element={ <Project/> } />
         <Route path="/Solar" element={ <Solar/> } />
+        <Route path="/AboutUs" element={ <AboutUs/> } />
+        <Route path="/Partner" element={ <Partner/> } />
 
       </Routes>
       <Footer/>
