@@ -1,4 +1,3 @@
-/* Counter.css */
 :root {
     --primary-color: #1d8f2c;
     --secondary-color: #24231d;
@@ -8,14 +7,14 @@
     --text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
-  
+
   .counter-wrapper {
     padding: 4rem 1rem;
     background-color: var(--bg-color);
     position: relative;
     overflow: hidden;
   }
-  
+
   .counter-container {
     display: flex;
     justify-content: center;
@@ -26,7 +25,7 @@
     position: relative;
     z-index: 2;
   }
-  
+
   .counter-box {
     flex: 1;
     min-width: 250px;
@@ -42,21 +41,21 @@
     transform: translateY(50px);
     opacity: 0;
   }
-  
+
   .counter-box.animated {
     transform: translateY(0);
     opacity: 1;
     animation: fadeInUp 0.6s ease-out forwards;
     animation-delay: var(--delay);
   }
-  
+
   .counter-icon {
     font-size: 3rem;
     margin-bottom: 1.5rem;
     color: var(--primary-color);
     transition: var(--transition);
   }
-  
+
   .counter-number {
     font-size: 2.5rem;
     font-weight: 700;
@@ -64,19 +63,19 @@
     margin-bottom: 0.5rem;
     transition: var(--transition);
   }
-  
+
   .count {
     display: inline-block;
     min-width: 60px;
   }
-  
+
   .counter-label {
     color: var(--paragraph-color);
     font-size: 1.1rem;
     margin-top: 0.5rem;
     transition: var(--transition);
   }
-  
+
   .counter-wave {
     position: absolute;
     bottom: 0;
@@ -88,26 +87,24 @@
     transform-origin: left;
     transition: var(--transition);
   }
-  
-  /* Hover Effects */
+
   .counter-box:hover {
     transform: translateY(-10px) !important;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   }
-  
+
   .counter-box:hover .counter-icon {
     transform: scale(1.2) rotate(10deg);
   }
-  
+
   .counter-box:hover .counter-number {
     color: var(--primary-color);
   }
-  
+
   .counter-box:hover .counter-wave {
     transform: scaleX(1);
   }
-  
-  /* Animations */
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -118,8 +115,7 @@
       transform: translateY(0);
     }
   }
-  
-  /* Background Pattern */
+
   .counter-wrapper::before {
     content: "";
     position: absolute;
@@ -134,19 +130,18 @@
     );
     z-index: 1;
   }
-  
-  /* Responsive Design */
+
   @media (max-width: 768px) {
     .counter-container {
       flex-direction: column;
       align-items: center;
     }
-    
+
     .counter-box {
       max-width: 100%;
       min-width: 200px;
     }
-    
+
     .counter-number {
       font-size: 2rem;
     }

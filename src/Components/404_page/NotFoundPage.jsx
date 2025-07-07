@@ -24,7 +24,6 @@ const NotFoundPage = () => {
 
         <div className="ev-illustration">
           <svg viewBox="0 0 200 100" className="ev-car">
-            {/* EV Car Illustration */}
             <rect x="30" y="50" width="140" height="30" rx="5" fill="#28a745" opacity="0.8" />
             <rect x="40" y="40" width="120" height="10" rx="5" fill="#17a2b8" />
             <circle cx="60" cy="80" r="10" fill="#2c3e50" />

@@ -1,12 +1,12 @@
 import { Accordion, Container } from "react-bootstrap";
 import "./FAQsAccordion.css"
 
-const SolarFAQ = () => {  
+const SolarFAQ = () => {
   return (
     <Container className="my-5">
       <h2 className="mb-4 text-center">Solar Power FAQs</h2>
       <Accordion defaultActiveKey="0">
-        <Accordion.Item  className="accordion-item">
+        <Accordion.Item className="accordion-item">
           <Accordion.Header className="accordion-header"><h3>What is feed in tariff?</h3></Accordion.Header>
           <Accordion.Body className="accordion-body">
             Feed-In tariff is the rate at which the DISCOM buys back solar power from it's customers after the self consumption of solar power by the customer. BESCOM in it's current policy is paying back Rs.3.56 per for each solar unit the customer gives to the grid. You can read more on the solar rooftop policy in Karnataka in the following link: BESCOM Solar Policy
