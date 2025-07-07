@@ -20,28 +20,45 @@ const Header = () => {
 
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mx-auto header-center">
-            <Nav.Link as={Link} to="/home">Home</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/Project">Projects</Nav.Link>
+         
 
             <NavDropdown title="Solar" id="solar-dropdown">
-              <NavDropdown.Item href="#solar/overview">Overview</NavDropdown.Item>
-              <NavDropdown.Item href="#solar/solutions">Solutions</NavDropdown.Item>
+              <NavDropdown.Item href="#solar/Subsidy Scheme"> <Link to={"/Solar"} className='text-black'>Subsidy Scheme</Link> </NavDropdown.Item>
+              <NavDropdown.Item href="#solar/Commercial">Commercial</NavDropdown.Item>
+              <NavDropdown.Item href="#solar/Apartmenta">Apartmenta</NavDropdown.Item>
+              <NavDropdown.Item href="#solar/Systems">Systems</NavDropdown.Item>
+              <NavDropdown.Item href="#solar/Consulancy">Consulancy</NavDropdown.Item>
+              <NavDropdown.Item href="#solar/Solutions">Solutions</NavDropdown.Item>
+              <NavDropdown.Item href="#solar/Solar Care">Solar Care</NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link href="#ev-charging">EV Charging</Nav.Link>
 
             <NavDropdown title="Knowledge Center" id="knowledge-dropdown">
-              <NavDropdown.Item as={Link} to="/blog">Blogs</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/faqs">FAQs</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/SolarRange">Solar Calculator</NavDropdown.Item>
-              <NavDropdown.Item href="#knowledge/videos">Videos</NavDropdown.Item>
-            </NavDropdown>
+              <NavDropdown.Item href="#knowledge/Why Solar ">Why Solar ?</NavDropdown.Item>
+              <NavDropdown.Item href="#knowledge/How Solar Works ">How Solar Works ?</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/blog">Blogs</NavDropdown.Item>
+              <NavDropdown.Item href="#knowledge/Solar Monitoring ">Solar Monitoring</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/faqs">FAQs</NavDropdown.Item>
+              <NavDropdown.Item href="#knowledge/Latest ">Latest</NavDropdown.Item>
+
+            </NavDropdown> 
 
             <Nav.Link href="#partner">Partner with Us</Nav.Link>
 
             <NavDropdown title="About Us" id="about-dropdown">
-              <NavDropdown.Item href="#about/company">Company</NavDropdown.Item>
-              <NavDropdown.Item href="#about/team">Team</NavDropdown.Item>
+              <NavDropdown.Item href="#about/Vision">Vision</NavDropdown.Item>
+              <NavDropdown.Item href="#about/Our Team">Our Team</NavDropdown.Item>
+              <NavDropdown.Item href="#about/Our Journey">Our Journey</NavDropdown.Item>
+              <NavDropdown.Item href="#about/Partners">Partners</NavDropdown.Item>
+              <NavDropdown.Item href="#about/Awards / Certifications">Awards / Certifications</NavDropdown.Item>
+              <NavDropdown.Item href="#about/Customer Referral Policy">Customer Referral Policy</NavDropdown.Item>
+              <NavDropdown.Item href="#about/Testimonial">Testimonial</NavDropdown.Item>
+              <NavDropdown.Item href="#about/Media Coverage">Media Coverage</NavDropdown.Item>
+              <NavDropdown.Item href="#about/Privacy Policy">Privacy Policy</NavDropdown.Item>
             </NavDropdown>
           </Nav>
 
