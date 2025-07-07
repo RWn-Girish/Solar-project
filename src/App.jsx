@@ -12,8 +12,13 @@ import SolarRange from './Components/SolarRange_Page/SolarRange';
 import Home from './Pages/Home';
 import Project from './Pages/Projects';
 import Solar from './Pages/Solor';
+<<<<<<< HEAD
 import EV_Charging from './Pages/EV-Charging';
 import NotFoundPage from './Components/404_page/NotFoundPage';
+=======
+import AboutUs from './Pages/AboutUs';
+import Partner from './Pages/Partner';
+>>>>>>> ea4f9ea1c5f2fcd5cdd613cf2538e6718c563f66
 
 function App() {
   return (
@@ -23,11 +28,19 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/faqs" element={<FAQPage />} />
+<<<<<<< HEAD
         <Route path="/SolarRange" element={<SolarRange />} />
         <Route path="/ev-charging" element={<EV_Charging />} />
         <Route path="/Project" element={<Project />} />
         <Route path="/Solar" element={<Solar />} />
         <Route path="/*" element={<NotFoundPage />} />
+=======
+        <Route path="/SolarRange" element={ <SolarRange/> } />
+        <Route path="/Project" element={ <Project/> } />
+        <Route path="/Solar" element={ <Solar/> } />
+        <Route path="/AboutUs" element={ <AboutUs/> } />
+        <Route path="/Partner" element={ <Partner/> } />
+>>>>>>> ea4f9ea1c5f2fcd5cdd613cf2538e6718c563f66
 
       </Routes>
       <Footer />

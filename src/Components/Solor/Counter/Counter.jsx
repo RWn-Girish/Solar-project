@@ -1,11 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import './Counter.css';
+import  money  from "../../../assets/images/money.png";
+
+import home  from "../../../assets/images/home.png";
+import energy  from "../../../assets/images/energy.png";
+
 
 const Counter = () => {
+
+  let moneyImg = <img src={money} alt="" style={{width : "60px"}} />
+  let homeImg = <img src={home} alt="" style={{width : "60px"}} />
+  let energyImg = <img src={energy} alt="" style={{width : "100px"}} />
   const data = [
-    { label: 'Installed capacity', end: 20, suffix: 'MW+', icon: '⚡' },
-    { label: 'Installed Projects', end: 1300, suffix: '+', icon: '🏗️' },
-    { label: 'Savings per Month', end: 100000, prefix: '₹', suffix: '+', icon: '💰' },
+    { label: 'Installed capacity', end: 20, suffix: 'MW+',  icon : energyImg  },
+    { label: 'Installed Projects', end: 1300, suffix: '+', icon: homeImg },
+    { label: 'Savings per Month', end: 100000, prefix: '₹', suffix: '+', icon: moneyImg},
   ];
 
   const [counts, setCounts] = useState(data.map(() => 0));
