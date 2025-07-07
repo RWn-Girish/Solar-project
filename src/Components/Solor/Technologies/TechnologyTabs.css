@@ -1,5 +1,3 @@
-/* TechnologyTabs.css - Alternative Design */
-
 :root {
     --bg-color: #f8f7f0;
     --primary-color: #1d8f2c;
@@ -10,7 +8,7 @@
     --border-radius: 12px;
     --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   }
-  
+
   .tech-container-alt {
     max-width: 100%;
     margin: 0 auto;
@@ -18,12 +16,12 @@
     background-color: var(--bg-color);
     font-family: 'Inter', 'Segoe UI', sans-serif;
   }
-  
+
   .tech-header {
     text-align: center;
     margin-bottom: 3rem;
   }
-  
+
   .tech-title {
     font-size: 2.2rem;
     color: var(--secondary-color);
@@ -31,13 +29,13 @@
     font-weight: 700;
     line-height: 1.3;
   }
-  
+
   .tech-title-highlight {
     color: var(--primary-color);
     position: relative;
     display: inline-block;
   }
-  
+
   .tech-title-highlight::after {
     content: '';
     position: absolute;
@@ -49,7 +47,7 @@
     z-index: -1;
     border-radius: 4px;
   }
-  
+
   .tech-subtitle {
     color: var(--paragraph-color);
     font-size: 1.1rem;
@@ -57,7 +55,7 @@
     margin: 0 auto;
     line-height: 1.6;
   }
-  
+
   .tab-selector-container {
     display: flex;
     justify-content: center;
@@ -65,7 +63,7 @@
     margin-bottom: 2.5rem;
     flex-wrap: wrap;
   }
-  
+
   .tab-option {
     padding: 1.2rem 2rem;
     background-color: var(--card-bg);
@@ -78,32 +76,32 @@
     box-shadow: var(--box-shadow);
     border: 1px solid #e0e0e0;
   }
-  
+
   .tab-option:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
   }
-  
+
   .tab-option.active {
     background-color: var(--primary-color);
     color: white;
     border-color: var(--primary-color);
   }
-  
+
   .tab-option.active .tab-icon {
     transform: scale(1.1);
   }
-  
+
   .tab-icon {
     font-size: 1.4rem;
     transition: transform 0.2s ease;
   }
-  
+
   .tab-label {
     font-weight: 600;
     font-size: 1rem;
   }
-  
+
   .tech-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -111,46 +109,46 @@
     align-items: center;
     animation: slideIn 0.5s ease-out forwards;
   }
-  
+
   .tech-content.right {
     animation: slideInRight 0.5s ease-out forwards;
   }
-  
+
   .tech-content.left {
     animation: slideInLeft 0.5s ease-out forwards;
   }
-  
+
   .tech-description {
     background-color: var(--card-bg);
     padding: 2.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
   }
-  
+
   .tech-content-title {
     color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
   }
-  
+
   .tech-description p {
     color: var(--paragraph-color);
     line-height: 1.8;
     margin-bottom: 2rem;
   }
-  
+
   .tech-benefits h4 {
     color: var(--secondary-color);
     margin-bottom: 1rem;
     font-size: 1.1rem;
   }
-  
+
   .tech-benefits ul {
     list-style: none;
     padding: 0;
   }
-  
+
   .tech-benefits li {
     margin-bottom: 0.8rem;
     display: flex;
@@ -158,12 +156,12 @@
     gap: 0.7rem;
     color: var(--secondary-color);
   }
-  
+
   .benefit-icon {
     color: var(--primary-color);
     font-weight: bold;
   }
-  
+
   .tech-image-container {
     position: relative;
     border-radius: var(--border-radius);
@@ -171,18 +169,18 @@
     box-shadow: var(--box-shadow);
     height: 410px;
   }
-  
+
   .tech-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
   }
-  
+
   .tech-image-container:hover .tech-image {
     transform: scale(1.03);
   }
-  
+
   .image-caption {
     position: absolute;
     bottom: 0;
@@ -194,7 +192,7 @@
     text-align: center;
     font-weight: 500;
   }
-  
+
   @keyframes slideInRight {
     from {
       opacity: 0;
@@ -205,7 +203,7 @@
       transform: translateX(0);
     }
   }
-  
+
   @keyframes slideInLeft {
     from {
       opacity: 0;
@@ -216,7 +214,7 @@
       transform: translateX(0);
     }
   }
-  
+
 
   @media (max-width: 1200px) {
   .tech-image-container {
@@ -227,33 +225,33 @@
     .tech-content {
       grid-template-columns: 1fr;
     }
-    
+
     .tech-image-container {
       height: 300px;
       order: -1;
     }
   }
-  
+
   @media (max-width: 768px) {
     .tech-title {
       font-size: 1.8rem;
     }
-    
+
     .tab-option {
       padding: 1rem 1.5rem;
     }
   }
-  
+
   @media (max-width: 576px) {
     .tech-container-alt {
       padding: 3rem 1.5rem;
     }
-    
+
     .tab-selector-container {
       flex-direction: column;
       align-items: center;
     }
-    
+
     .tab-option {
       width: 100%;
       justify-content: center;

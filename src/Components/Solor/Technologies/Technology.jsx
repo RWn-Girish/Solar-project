@@ -1,24 +1,23 @@
 import React, { useState } from 'react';
 import './TechnologyTabs.css';
 
-// Import your images
 import optimizerDiagram from '../../../assets/images/daigram_1.jpg';
 import microDiagram from '../../../assets/images/daigram_2.webp';
 import stringDiagram from '../../../assets/images/daigram_3.webp';
 
 const tabs = [
   { 
-    id: 'optimizer', 
+    id: 'optimizer',
     label: 'Power Optimizers',
     icon: '⚡'
   },
-  { 
-    id: 'micro', 
+  {
+    id: 'micro',
     label: 'Micro Inverter',
     icon: '🔄'
   },
-  { 
-    id: 'string', 
+  {
+    id: 'string',
     label: 'String Inverter',
     icon: '🔗'
   },
@@ -49,7 +48,7 @@ const TechnologyTabs = () => {
   const handleTabChange = (tabId) => {
     const currentIndex = tabs.findIndex(tab => tab.id === activeTab);
     const newIndex = tabs.findIndex(tab => tab.id === tabId);
-    
+
     setDirection(newIndex > currentIndex ? 'right' : 'left');
     setActiveTab(tabId);
   };
@@ -65,7 +64,7 @@ const TechnologyTabs = () => {
 
       <div className="tab-selector-container">
         {tabs.map((tab) => (
-          <div 
+          <div
             key={tab.id}
             className={`tab-option ${activeTab === tab.id ? 'active' : ''}`}
             onClick={() => handleTabChange(tab.id)}
@@ -80,7 +79,7 @@ const TechnologyTabs = () => {
         <div className="tech-description">
           <h3 className="tech-content-title">{tabs.find(t => t.id === activeTab).label} Technology</h3>
           <p>{descriptions[activeTab]}</p>
-          
+
           <div className="tech-benefits">
             <h4>Key Benefits:</h4>
             <ul>
@@ -95,8 +94,8 @@ const TechnologyTabs = () => {
         </div>
 
         <div className="tech-image-container">
-          <img 
-            src={images[activeTab]} 
+          <img
+            src={images[activeTab]}
             alt={`${tabs.find(t => t.id === activeTab).label} diagram`}
             className="tech-image"
           />
