@@ -1,125 +1,80 @@
-import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { FaFacebookF, FaLinkedinIn, FaYoutube, FaInstagram, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-import { AiFillClockCircle } from "react-icons/ai";
-import './Footer.css';
+import { Container, Row, Col } from "react-bootstrap";
+import { FaFacebookF, FaTwitter, FaInstagram, FaPhoneAlt, FaMapMarkerAlt, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 import FooterLogo from "../../../assets/images/Prestige (4) 1.png";
+import './Footer.css'
 
-const Footer = () => (
-  <footer className="footer">
-    <Container>
-
-      <div className="footer-top-info">
-        <Row>
-          <Col xs={12} md={4} className="d-flex align-items-center mb-4 mb-md-0">
-            <FaPhoneAlt className="footer-icon" />
-            <div>
-              <div style={{ fontSize: 14, color: "#fff" }}>Requesting A Call:</div>
-              <div style={{ fontWeight: 600, fontSize: 20 }}>+91-8123410101</div>
-            </div>
-          </Col>
-          <Col xs={12} md={4} className="d-flex align-items-center mb-4 mb-md-0">
-            <AiFillClockCircle className="footer-icon" />
-            <div>
-              <div style={{ fontSize: 14, color: "var(--paragraph-color)" }}>Email us for query:</div>
-              <div style={{ fontWeight: 600, fontSize: 20 }}>info@ecosoch.com</div>
-            </div>
-          </Col>
-          <Col xs={12} md={4} className="d-flex align-items-center">
-            <FaMapMarkerAlt className="footer-icon" />
-            <div>
-              <div style={{ fontSize: 14, color: "var(--paragraph-color)" }}>Location:</div>
-              <div style={{ fontWeight: 600, fontSize: 20 }}>Kodigehalli, Bengaluru 560097</div>
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      <div className="footer-bottom-info">
-        <Row style={{ padding: "80px 40px" }}>
-
-          <Col xs={12} md={4} className="mb-4 mb-md-0 d-flex flex-column gap-2">
-            <img src={FooterLogo} alt="EcoSoch" style={{ width: 180, marginBottom: 18 }} />
-            <p style={{ color: "var(--paragraph-color)", fontSize: 15 }}>
-              EcoSoch® was started with a vision to deliver sustainable energy solutions for all...
-            </p>
-            <div className="footer-socials d-flex gap-2 mt-3">
-              <a href="#" className="footer-social-icons"><FaFacebookF /></a>
-              <a href="#" className="footer-social-icons"><FaLinkedinIn /></a>
-              <a href="#" className="footer-social-icons"><FaYoutube /></a>
-              <a href="#" className="footer-social-icons"><FaInstagram /></a>
-            </div>
-          </Col>
-
-          <Col xs={12} md={4} lg={2} className="mb-4 mb-md-0">
-            <div className="footer-useful-links">
-              <div className="footer-title mb-3"><h4>Useful Links</h4></div>
-              <ul className="footer-link d-flex flex-column gap-2" style={{ listStyle: "none", paddingLeft: 0, fontSize: 15 }}>
-                <li><a href="#" className="text-decoration-none">Home</a></li>
-                <li><a href="#" className="text-decoration-none">Projects</a></li>
-                <li><a href="#" className="text-decoration-none">Partner with Us</a></li>
-                <li><a href="#" className="text-decoration-none">About Us</a></li>
-                <li><a href="#" className="text-decoration-none">Subsidy Scheme</a></li>
-                <li><a href="#" className="text-decoration-none">FAQ</a></li>
-                <li><a href="#" className="text-decoration-none">Privacy Policy</a></li>
-              </ul>
-            </div>
-          </Col>
-
-          <Col xs={12} md={4} lg={2} className="mb-4 mb-md-0">
-            <div className="footer-useful-links">
-              <div className="footer-title mb-3"><h4>Support</h4></div>
-              <ul className="footer-link d-flex flex-column gap-2" style={{ listStyle: "none", paddingLeft: 0, fontSize: 15 }}>
-                <li><a href="#" className="text-decoration-none">Customer Support</a></li>
-                <li><a href="#" className="text-decoration-none">Installation Guide</a></li>
-                <li><a href="#" className="text-decoration-none">Terms & Conditions</a></li>
-                <li><a href="#" className="text-decoration-none">Contact Us</a></li>
-              </ul>
-            </div>
-          </Col>
-
-          <Col xs={12} md={12} lg={4}>
-            <div className="footer-newsletter-section p-3 rounded-3 shadow-sm">
-              <div className="footer-title mb-2"><h4>Join Our Newsletter</h4></div>
-              <p className="footer-news-text">
-                Stay updated with the latest innovations, projects, and offers from EcoSoch.
-              </p>
-              <Form className="d-flex flex-column flex-sm-row gap-2 mt-3">
-                <Form.Control
-                  type="email"
-                  placeholder="Your Email"
-                  className="footer-input"
-                />
-                <Button className="footer-btn">
-                  Subscribe
-                </Button>
-              </Form>
-            </div>
-          </Col>
-
-
-        </Row>
-      </div>
-
-      <div className="footer-copyright-info">
-        <Row>
-          <div className="footer-bottom d-flex justify-content-between">
-            <div className="footer-copyright">
-              <p className="fs-6">© 2025 EcoSoch. All Rights Reserved.</p>
-            </div>
-            <div className="footer-bottom-navlist ">
-              <ul class="footer-ul-info">
-                <li><a href="#" className="text-decoration-none ">Trams &amp; Condition</a></li>
-                <li><a href="#" className="text-decoration-none ">Privacy Policy</a></li>
-                <li><a href="#" className="text-decoration-none ">Contact Us</a></li>
-              </ul>
-            </div>
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <Container>
+        <Row className="gy-4">
+          {/* Logo & Socials */}
+        <Col xs={12} md={6} lg={3}>
+          <div className="d-flex align-items-center gap-3 mb-3">
+            <img src={FooterLogo} alt="EcoSoch" className="footer-logo" />
           </div>
-        </Row>
-      </div>
+          <h4 className="footer-title mb-0">Ecosoch</h4>
+          <p className="footer-desc">
+            We are committed to promoting sustainability and environmental awareness.
+          </p>
 
-    </Container>
-  </footer>
-);
+          <div className="d-flex gap-3 mt-3 footer-socials">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="footer-social-icons"><FaFacebookF /></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="footer-social-icons"><FaInstagram /></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="footer-social-icons"><FaYoutube /></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="footer-social-icons"><FaTwitter /></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="footer-social-icons"><FaLinkedin /></a>
+          </div>
+        </Col>
+
+          {/* Useful Links */}
+          <Col xs={12} md={6} lg={3}>
+            <h4 className="footer-title">Useful Links</h4>
+            <ul className="footer-link-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about-us">About Us</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/solar-calculator">Calculator</a></li>
+              <li><a href="/blogs">Blogs</a></li>
+              <li><a href="/out-partner">Our Partner</a></li>
+              <li><a href="/faqs">FAQs</a></li>
+            </ul>
+          </Col>
+
+          {/* Contact Info */}
+          <Col xs={12} md={6} lg={3}>
+            <h4 className="footer-title">Contact Us</h4>
+            <div className="footer-contact-info">
+              <div><FaPhoneAlt className="footer-icon" /> +91-8123410101</div>
+              <div><AiOutlineMail className="footer-icon" /> info@ecosoch.com</div>
+              <div><FaMapMarkerAlt className="footer-icon" /> Kodigehalli, Bengaluru 560097</div>
+            </div>
+          </Col>
+
+          {/* Newsletter */}
+          <Col xs={12} md={6} lg={3}>
+            <h4 className="footer-title">Subscribe</h4>
+            <p className="footer-news-text">Get updates about our latest offers and events.</p>
+            <div className="footer-newsletter-section mt-3">
+              <input type="email" placeholder="Enter your email" className="footer-input" />
+              <button className="footer-btn mt-2">Subscribe</button>
+            </div>
+          </Col>
+
+        </Row>
+
+        {/* Bottom Info */}
+        <Row className="mt-4">
+          <Col xs={12}>
+            <div className="footer-copyright-info">
+              <p className="text-center mt-3 mb-0">© {new Date().getFullYear()} Ecosoch. All rights reserved.</p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </footer>
+  );
+};
 
 export default Footer;

@@ -8,7 +8,7 @@ import  money  from "../../../assets/images/money.png";
 import './SolarCalculator.css';
 
 const SolarCalculator = () => {
-  const [bill, setBill] = useState(1000);
+  const [bill, setBill] = useState(0);
   const [showResults, setShowResults] = useState(false);
 
   const systemSize = Math.ceil(bill / 750);

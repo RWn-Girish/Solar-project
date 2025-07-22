@@ -7,7 +7,7 @@ const initialState = {
     email: '',
     city: '',
     mobile: '',
-    zipCode: '',
+    pinCode: '',
     message: ''
   };
   
@@ -21,7 +21,7 @@ const initialState = {
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log('Form submitted:', formData);
+      // console.log('Form submitted:', formData);
       setIsSubmitted(true);
   
       setTimeout(() => {
@@ -117,15 +117,15 @@ const initialState = {
                   </Col>
                   <Col md={12}>
                     <div className="form-group">
-                      <label htmlFor="zipCode" className="form-label">Zip Code :</label>
+                      <label htmlFor="pinCode" className="form-label">Pin Code :</label>
                       <input
                         type="text"
                         className="form-control"
-                        id="zipCode"
-                        name="zipCode"
-                        value={formData.zipCode}
+                        id="pinCode"
+                        name="pinCode"
+                        value={formData.pinCode}
                         onChange={handleChange}
-                        placeholder="Enter Zip Code"
+                        placeholder="Enter Pin Code"
                       />
                     </div>
                   </Col>

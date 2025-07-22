@@ -2,8 +2,13 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaEnvelope, FaPhone, FaArrowRight } from 'react-icons/fa';
 import './bannerSection.css';
+import { useNavigate } from 'react-router';
 
 const BannerSection = () => {
+  const navigate = useNavigate();
+  const handleGetQuote = () => {
+    navigate('/solar-calculator')
+  }
   return (
     <section className="residential-section">
       <Container  className="h-100">
@@ -13,16 +18,16 @@ const BannerSection = () => {
               <h2 className="section-title">Residential Solutions</h2>
               <p className="section-subtitle">Premium solutions for individual houses and apartments</p>
               <div className="button-group mt-4">
-                <button className="btn btn-primary btn-lg me-3 primary-btn">
+                <button onClick={handleGetQuote} className="btn btn-primary btn-lg me-3 primary-btn">
                   Get a Quote <FaArrowRight className="ms-2" />
                 </button>
-                <button className="btn btn-outline-light btn-lg secondary-btn">
+                {/* <button className="btn btn-outline-light btn-lg secondary-btn">
                   Explore More
-                </button>
+                </button> */}
               </div>
             </div>
           </Col>
-          <Col lg={6} className="order-lg-2 order-1 mb-lg-0 mb-4">
+          {/* <Col lg={6} className="order-lg-2 order-1 mb-lg-0 mb-4">
             <div className="action-buttons">
               <div className="quote-box">
                 <div className="icon-wrapper">
@@ -37,7 +42,7 @@ const BannerSection = () => {
                 <span>CALL NOW</span>
               </div>
             </div>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </section>

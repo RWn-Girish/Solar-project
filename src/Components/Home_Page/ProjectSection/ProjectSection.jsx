@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './ProjectSection.css';
 import Card_1 from './../../../assets/images/card.1.jpg';
 import Card_2 from './../../../assets/images/card.2.webp';
@@ -28,8 +28,7 @@ const projects = [
     { id: 9, image: Card_9, category: "EV" },
     { id: 10, image: Card_10, category: "RESIDENTIAL" },
     { id: 11, image: Card_11, category: "COMMERCIAL" },
-    { id: 12, image: Card_12, category: "APARTMENTS" },
-    
+    { id: 12, image: Card_12, category: "APARTMENTS" },  
   ];
   
 

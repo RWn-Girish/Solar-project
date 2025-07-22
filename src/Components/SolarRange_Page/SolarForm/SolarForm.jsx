@@ -6,7 +6,7 @@ const initialState = {
   email: '',
   city: '',
   mobile: '',
-  zipCode: '',
+  pinCode: '',
   message: ''
 };
 
@@ -39,7 +39,7 @@ const ContactForm = () => {
 
             <div className='d-flex gap-3 full-group'>
             <div className="form-group ">
-              <label htmlFor="name">Your Name*</label>
+              <label htmlFor="name">Your Name *</label>
               <input
                 type="text"
                 id="name"
@@ -53,7 +53,7 @@ const ContactForm = () => {
             </div>
 
             <div className="form-group ">
-              <label htmlFor="email">Email Address*</label>
+              <label htmlFor="email">Email Address *</label>
               <input
               placeholder='Enter Your Email'
                 type="email"
@@ -70,7 +70,7 @@ const ContactForm = () => {
             <div className='d-flex gap-3 full-group'>
 
             <div className="form-group ">
-              <label htmlFor="city">City</label>
+              <label htmlFor="city">City *</label>
               <input
                 type="text"
                 placeholder='Enter Your City'
@@ -79,11 +79,12 @@ const ContactForm = () => {
                 value={formData.city}
                 onChange={handleChange}
                 className="form-input"
+                required
               />
             </div>
 
             <div className="form-group ">
-              <label htmlFor="mobile">Mobile Number*</label>
+              <label htmlFor="mobile">Mobile Number *</label>
               <input
                 type="tel"
                 id="mobile"
@@ -98,20 +99,21 @@ const ContactForm = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="zipCode">Zip Code</label>
+              <label htmlFor="pinCode">Pin Code *</label>
               <input
                 type="text"
-                id="zipCode"
-                placeholder='Enter Your zipCode'
-                name="zipCode"
-                value={formData.zipCode}
+                id="pinCode"
+                placeholder='Enter Your pinCode'
+                name="pinCode"
+                value={formData.pinCode}
                 onChange={handleChange}
                 className="form-input"
+                required
               />
             </div>
 
           <div className="form-group message-group">
-            <label htmlFor="message">Your Message*</label>
+            <label htmlFor="message">Your Message *</label>
             <textarea
               id="message"
               name="message"

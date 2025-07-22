@@ -21,21 +21,26 @@ const Header = () => {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mx-auto header-center">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/Project">Projects</Nav.Link>
+            <Nav.Link as={Link} to="/about-us">About</Nav.Link>
+            <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
+            <Nav.Link as={Link} to="/solar-calculator">Solar Calculator</Nav.Link>
+            <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
+            <Nav.Link as={Link} to="/out-partner">Our Patners</Nav.Link>
 
 
-            <NavDropdown title="Solar" id="solar-dropdown">
+            {/* <NavDropdown title="Solar" id="solar-dropdown">
               <NavDropdown.Item href="#solar/Subsidy Scheme"> <Link to={"/Solar"} className='text-black text-decoration-none'>Commercial</Link> </NavDropdown.Item>
               <NavDropdown.Item href="#solar/Apartmenta">Apartmenta</NavDropdown.Item>
               <NavDropdown.Item href="#solar/Systems">Systems</NavDropdown.Item>
               <NavDropdown.Item href="#solar/Consulancy">Consulancy</NavDropdown.Item>
               <NavDropdown.Item href="#solar/Solutions">Solutions</NavDropdown.Item>
               <NavDropdown.Item href="#solar/Solar Care">Solar Care</NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
 
-            <Nav.Link href="/ev-charging">EV Charging</Nav.Link>
+            {/* <Nav.Link href="/ev-charging">EV Charging</Nav.Link> */}
+            
 
-            <NavDropdown title="Knowledge Center" id="knowledge-dropdown">
+            {/* <NavDropdown title="Knowledge Center" id="knowledge-dropdown">
               <NavDropdown.Item as={Link} to="/SolarRange">Solar Calculator</NavDropdown.Item>
               <NavDropdown.Item href="#knowledge/Why Solar ">Why Solar ?</NavDropdown.Item>
               <NavDropdown.Item href="#knowledge/How Solar Works ">How Solar Works ?</NavDropdown.Item>
@@ -44,14 +49,13 @@ const Header = () => {
               <NavDropdown.Item as={Link} to="/faqs">FAQs</NavDropdown.Item>
               <NavDropdown.Item href="#knowledge/Latest ">Latest</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/*">404</NavDropdown.Item>
-
-            </NavDropdown>
-
-            
-            <Nav.Link href="#partner"> <Link to={"/Partner"} className='text-black text-decoration-none'>Partner With US</Link></Nav.Link>
+            </NavDropdown> */}
 
             
-            <NavDropdown title="About Us" id="about-dropdown">
+            {/* <Nav.Link href="#partner"> <Link to={"/Partner"} className='text-black text-decoration-none'>Partner With US</Link></Nav.Link> */}
+
+            
+            {/* <NavDropdown title="About Us" id="about-dropdown">
             <NavDropdown.Item href="#solar/Subsidy Scheme"> <Link to={"/AboutUs"} className='text-black text-decoration-none'>Vision</Link> </NavDropdown.Item>
 
               <NavDropdown.Item href="#about/Our Team">Our Team</NavDropdown.Item>
@@ -62,7 +66,7 @@ const Header = () => {
               <NavDropdown.Item href="#about/Testimonial">Testimonial</NavDropdown.Item>
               <NavDropdown.Item href="#about/Media Coverage">Media Coverage</NavDropdown.Item>
               <NavDropdown.Item href="#about/Privacy Policy">Privacy Policy</NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
 
           <div className="header-right d-none d-lg-block">

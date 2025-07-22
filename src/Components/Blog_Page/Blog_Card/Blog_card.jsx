@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import SingleBlogCard from './Single_blog';
 import Card_1 from './../../../assets/images/card.1.jpg';
 import Card_2 from './../../../assets/images/card.2.webp';
@@ -266,7 +266,7 @@ const BlogExample = ({ searchTerm }) => {
       <div className="row">
         {displayedBlogs.map((blog, idx) => (
           <div key={idx} className="col-md-6 col-lg-4 mb-4">
-            <SingleBlogCard {...blog} readMoreLink="#" />
+            <SingleBlogCard {...blog} readMoreLink={`/blog-detail/${idx}`} />
           </div>
         ))}
       </div>
