@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router";
 import { FaFacebookF, FaTwitter, FaInstagram, FaPhoneAlt, FaMapMarkerAlt, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import FooterLogo from "../../../assets/images/Prestige (4) 1.png";
@@ -32,13 +33,13 @@ const Footer = () => {
           <Col xs={12} md={6} lg={3}>
             <h4 className="footer-title">Useful Links</h4>
             <ul className="footer-link-list">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about-us">About Us</a></li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="/solar-calculator">Calculator</a></li>
-              <li><a href="/blogs">Blogs</a></li>
-              <li><a href="/out-partner">Our Partner</a></li>
-              <li><a href="/faqs">FAQs</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about-us">About Us</Link></li>
+              <li><Link to="/projects">Projects</Link></li>
+              <li><Link to="/solar-calculator">Calculator</Link></li>
+              <li><Link to="/blogs">Blogs</Link></li>
+              <li><Link to="/out-partner">Our Partner</Link></li>
+              <li><Link to="/faqs">FAQs</Link></li>
             </ul>
           </Col>
 
