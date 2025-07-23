@@ -18,11 +18,13 @@ import NotFoundPage from './Components/404_page/NotFoundPage';
 import Partner from './Pages/Partner';
 import ScrollToTopButton from './Components/ScrollUptoTop/ScrollToTopButton';
 import BlogDetailPage from './Components/Blog_Detail_Page/BlogDetailPage';
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <>
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={ <AboutUs/> } />
